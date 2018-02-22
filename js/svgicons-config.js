@@ -22,5 +22,17 @@ var svgIconConfig = {
 				} 
 			}
 		]
+	},
+	animation : {
+		url : '/test_svg/svg/arrow_down.svg',
+		animation : [
+			{ 
+				el : 'path', 
+				animProperties : { 
+					from : { val : '{"path" : "M98.995 7.071 91.924 0 49.497 42.426 7.071 0 0 7.071 49.497 56.569 98.995 7.071z"}' }, 
+					to : { val : '{"path" : "M98.995 49.497 91.924 56.569 49.497 14.142 7.071 56.569 0 49.497 49.497 0 98.995 49.497z"}' }
+				} 
+			}
+		]
 	}
 };
