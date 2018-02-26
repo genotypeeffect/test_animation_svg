@@ -56,7 +56,7 @@
   		extend( this.options, options );
 		this.svg = Snap( this.options.size.w, this.options.size.h );
 		// this.svg.attr( 'viewBox', '0 0 64 64' );
-		this.svg.attr( 'viewBox', '0 0 ' + this.options.size.w + ' ' + this.options.size.h );
+		this.svg.attr( 'viewBox', '0 0 ' + this.options.viewBox.w + ' ' + this.options.viewBox.h );
 		this.el.appendChild( this.svg.node );
 		// state
 		this.toggled = false;
@@ -87,6 +87,7 @@
 		easing : mina.linear,
 		evtoggle : 'click', // click || mouseover
 		size : { w : 64, h : 64 },
+		viewBox : { w : 64, h : 64 },
 		onLoad : function() { return false; },
 		onToggle : function() { return false; }
 	};
