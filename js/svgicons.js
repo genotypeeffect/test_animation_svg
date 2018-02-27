@@ -53,7 +53,19 @@
 	function svgIcon( el, config, options ) {
 		this.el = el;
 		this.options = extend( {}, this.options );
+		// default value of viewBox
+		if (options.size.w) {
+  			this.options.viewBox.w = options.size.w;
+		} else {
+  			this.options.viewBox.w = this.options.size.w;
+		}
+		if (options.size.h) {
+  			this.options.viewBox.h = options.size.h;
+		} else {
+  			this.options.viewBox.h = this.options.size.h;
+		}
   		extend( this.options, options );
+
 		this.svg = Snap( this.options.size.w, this.options.size.h );
 		// this.svg.attr( 'viewBox', '0 0 64 64' );
 		this.svg.attr( 'viewBox', '0 0 ' + this.options.viewBox.w + ' ' + this.options.viewBox.h );
